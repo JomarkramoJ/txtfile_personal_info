@@ -61,26 +61,19 @@ while True:
     
     informations.append(user_info)
 
+    while True:
+        more = input("Do you want to add another person? (yes/no): ").strip().lower()
+        if more == "no":
+            break
+        elif more == "yes":
+            break
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
+    if more == "no":
+        break
+
     print(informations)
 
-    # with open("./information_list.py", "a") as file_handle:
-        
-
-    # file_handle.write("Name: " + input("Enter Name: \n") + "\n")
-    
-    
-    
-    # while True:
-    #     try:
-    #         age = str(int(input("Enter Age: ")))
-    #         file_handle.write("Age: " + age + "\n")
-    #         break
-    #     except:
-    #         print("Invalid Age: ")
-
-    # file_handle.write("Adress: " + input("Enter Address: \n") + "\n")
-    # file_handle.write("Birthday: " + input("Enter Birthday: \n") + "\n")
-    # file_handle.write("School: " + input("Enter School: \n") + "\n")
-    # file_handle.write("Course: " + input("Enter Course: \n") + "\n")
-    # file_handle.write("Year: " + str(int(input("Enter Year: \n"))) + "\n")
-    # file_handle.write("Section: " + str(int(input("Enter Section: \n"))) + "\n")
+with open("./information_list.py", "a") as file_handle:
+    file_handle.write(str(informations) + "\n")
