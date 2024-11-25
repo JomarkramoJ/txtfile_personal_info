@@ -11,12 +11,13 @@ def find_user(file_path, search_name):
         return None
 
 file_path = "./information_list.py"
-search_name = input("Enter the full name to search: ").strip()
 
-result = find_user(file_path, search_name)
-if result:
-    print("\nInformation found: ")
-    for key, value in result.items():
-        print(f"{key}: {value}")
-else:
-    print("\nNo information found for the given name.")
+while True:
+    search_name = input("Enter the full name to search: ").strip()
+    result = find_user(file_path, search_name)
+    if result:
+        print("\nInformation found: ")
+        for key, value in result.items():
+            print(f"{key}: {value}")
+    else:
+        print("\nNo information found for the given name.")
