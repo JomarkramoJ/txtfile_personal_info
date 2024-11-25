@@ -76,4 +76,5 @@ while True:
     print(informations)
 
 with open("./information_list.py", "a") as file_handle:
-    file_handle.write(str(informations) + "\n")
+    for info in informations:
+        file_handle.write(str(info) + "\n")
